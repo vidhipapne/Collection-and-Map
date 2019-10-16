@@ -1,0 +1,39 @@
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        Hashtable h = new Hashtable();
+        h.put(101,"ram");
+        h.put(402,"raj");
+        h.put(702,"rahul");
+        h.put(803,"gopal");
+        System.out.println(h);
+        System.out.println(h.contains("ram"));
+        System.out.println(h.containsKey(702));
+        System.out.println(h.get(803));
+        
+        Enumeration e = h.keys();
+        while(e.hasMoreElements()){
+            Integer keys = (Integer)e.nextElement();
+            System.out.println("key:"+ keys + "\nValue: "+h.get(keys));
+        }
+        
+        
+     }
+}
+
+
+
+output-
+{702=rahul, 402=raj, 101=ram, 803=gopal}
+true
+true
+gopal
+key:702
+Value: rahul
+key:402
+Value: raj
+key:101
+Value: ram
+key:803
+Value: gopal
